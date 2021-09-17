@@ -6,6 +6,11 @@
 
 .ccls-cache
 
+### build foldes ###
+
+bin
+build
+
 ### C++ ###
 # Prerequisites
 *.d
