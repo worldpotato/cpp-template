@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/c++,cmake,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=c++,cmake,vim
 
+### ccls ### 
+
+.ccls-cache
+
 ### C++ ###
 # Prerequisites
 *.d
