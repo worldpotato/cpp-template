@@ -6,7 +6,6 @@ cmake_minimum_required (VERSION 3.18)
 # replace <subLib> with the name of libraries
 # :%s/<subLib>/name/g
 
-
 project(main)
 
 find_package(GTest REQUIRED)
@@ -24,11 +23,16 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 
 set(source_dir "${PROJECT_SOURCE_DIR}/")
 
-file (GLOB source_files "${source_dir}/${PROJECT_NAME}.cpp")
+file(GLOB source_files
+    "${source_dir}/${PROJECT_NAME}.cpp"
+    "${source_dir}/src/printer.cpp"
+    )
 
-add_executable (${PROJECT_NAME} ${source_files})
+
 add_subdirectory(lib)
 add_subdirectory(test)
+add_executable (${PROJECT_NAME} ${source_files})
+target_include_directories(${PROJECT_NAME} PRIVATE "${source_dir}/include")
 
 enable_testing()
 

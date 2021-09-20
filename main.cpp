@@ -1,15 +1,25 @@
 /**
- * @author      : worldpotato
- * @file        : main
- * @created     : Sunday Dec 13, 2020 11:59:33 CET
+ * @file main.cpp
+ * @author Worldpotato
+ * @date 2021-09-20
+ * @brief The Main file of this template, where all the magic starts.
+ *
+ * The main file is the starting point of each project.
  */
 
 #include <iostream>
+#include "printer.hpp"
 
+/**
+ * This is the main where all the magic starts.
+ *
+ */
 int main()
 {
-    std::cout << "hello World" << std::endl;
+    printer p;
+    p = printer("Hello World!");
+    p.print("hello world!");
+    p.print();
     return 0;
 }
-
 
