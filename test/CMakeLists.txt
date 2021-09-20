@@ -13,6 +13,8 @@ add_executable(${PROJECT_NAME}_tests
     mainTest.cpp
     ./testsuits/example_failure.cpp
     ./testsuits/example_success.cpp
+    ../src/printer.cpp
+    ./testsuits/test_printer.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}_tests
