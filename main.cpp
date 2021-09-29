@@ -14,7 +14,7 @@
  * This is the main where all the magic starts.
  *
  */
-int main()
+int main(int argc, char** argv)
 {
     printer p;
     p = printer("Hello World!");
