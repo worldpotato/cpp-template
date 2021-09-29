@@ -11,6 +11,10 @@
 third_party
 tools
 
+### doxygen documentation
+
+documentation
+
 ### build foldes ###
 
 bin
