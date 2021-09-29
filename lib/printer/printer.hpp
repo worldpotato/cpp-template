@@ -4,10 +4,10 @@
  * This is a class to print strings to the console.
  */
 class printer {
-    private:
-        std::string print_output;
+private:
+    std::string print_output;
 
-    public:
+public:
     /**
      * @brief The default constructor which just creates an object of this class.
      */
@@ -32,5 +32,4 @@ class printer {
      * @return 0 when everything is fine
      */
     int print(std::string input);
-
 };

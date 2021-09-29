@@ -7,8 +7,8 @@
  * The main file is the starting point of each project.
  */
 
+#include "lib/printer/printer.hpp"
 #include <iostream>
-#include "printer.hpp"
 
 /**
  * This is the main where all the magic starts.
@@ -22,4 +22,3 @@ int main()
     p.print();
     return 0;
 }
-
