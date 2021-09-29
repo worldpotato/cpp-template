@@ -1,0 +1,11 @@
+dist: focal
+
+addons:
+  apt:
+    packages:
+      - wget
+      - pkg-config
+      - bazel-bootstrap
+
+script:
+  - bazel build //hello-world:hello-world
