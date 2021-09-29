@@ -6,6 +6,11 @@
 
 .ccls-cache
 
+### scripts for compile_commands
+
+third_party
+tools
+
 ### build foldes ###
 
 bin
