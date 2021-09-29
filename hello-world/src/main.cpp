@@ -14,11 +14,13 @@
  * This is the main where all the magic starts.
  *
  */
-int main()
+int main(int argc, char** argv)
 {
     printer p;
-    p = printer("Hello World!");
+    if (argc > 1) {
+        p = printer(argv[1]);
+        p.print();
+    }
     p.print("hello world!");
-    p.print();
     return 0;
 }
