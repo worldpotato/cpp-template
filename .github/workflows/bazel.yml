@@ -25,9 +25,9 @@ jobs:
 
     - name: Build
       run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" build //hello-world:hello-world
+        "${GITHUB_WORKSPACE}/bin/bazel" build ...
 
     - name: Test
       run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" test //hello-world:hello-world
+        "${GITHUB_WORKSPACE}/bin/bazel" test ... --test_output=all --test_arg="--gtest_color=true"
 
