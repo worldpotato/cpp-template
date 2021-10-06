@@ -6,7 +6,9 @@ cmake_minimum_required (VERSION 3.18)
 # replace <subLib> with the name of libraries
 # :%s/<subLib>/name/g
 
-project(main)
+project(printer)
+
+find_package(GTest REQUIRED)
 
 # compile flags
 add_compile_options(-Wall -Wextra -pedantic)
@@ -20,19 +22,17 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 
-set(source_dir "${PROJECT_SOURCE_DIR}/")
+# set(source_dir "${PROJECT_SOURCE_DIR}/src/")
 
 file(GLOB source_files
-    "${source_dir}/${PROJECT_NAME}.cpp"
+  "${PROJECT_NAME}.cpp"
     )
 
+add_subdirectory(test)
+add_library(${PROJECT_NAME} ${source_files})
+# target_include_directories(${PROJECT_NAME} PRIVATE "${source_dir}/include")
 
-add_subdirectory(lib)
-add_executable (${PROJECT_NAME} ${source_files})
-target_include_directories(${PROJECT_NAME} PRIVATE 
-                          "${source_dir}/include"
-                          "lib")
-target_link_libraries(${PROJECT_NAME} printer)
+enable_testing()
 
 # move compile_commands to root of the project
 # that should be done for ccls

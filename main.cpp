@@ -7,7 +7,7 @@
  * The main file is the starting point of each project.
  */
 
-#include "printer.hpp"
+#include "printer/printer.hpp"
 #include <iostream>
 
 /**

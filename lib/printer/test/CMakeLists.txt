@@ -5,13 +5,13 @@
 ######################################################################
 find_package(Threads REQUIRED)
 
-enable_testing()
+set(CMAKE_CXX_FLAGS --coverage)
 
-include_directories(../include)
+enable_testing()
 
 add_executable(${PROJECT_NAME}_tests
     mainTest.cpp
-    ../src/printer.cpp
+    ../printer.cpp
     ./testsuits/test_printer.cpp
 )
 
@@ -20,6 +20,10 @@ target_link_libraries(${PROJECT_NAME}_tests
     gmock
     pthread
 )
+
+target_include_directories(${PROJECT_NAME}_tests PRIVATE
+                          "../"
+                          )
 
 add_test(
     NAME ${PROJECT_NAME}_tests
