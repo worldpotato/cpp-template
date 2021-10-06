@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "printer.hpp"
+#include "lib/printer/printer.hpp"
 
 TEST(printer, pre_defined_string)
 {
