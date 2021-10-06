@@ -9,11 +9,20 @@
 ### build foldes ###
 
 bin
-build
+build*
+third_party
+tools
+
+### documentation
+
+documentation
+
 
 ### C++ ###
 # Prerequisites
 *.d
+
+bazel-*
 
 # Compiled Object files
 *.slo
