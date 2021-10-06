@@ -11,8 +11,6 @@ include_directories(../include)
 
 add_executable(${PROJECT_NAME}_tests
     mainTest.cpp
-    ./testsuits/example_failure.cpp
-    ./testsuits/example_success.cpp
     ../src/printer.cpp
     ./testsuits/test_printer.cpp
 )
@@ -20,6 +18,7 @@ add_executable(${PROJECT_NAME}_tests
 target_link_libraries(${PROJECT_NAME}_tests
     gtest
     gmock
+    pthread
 )
 
 add_test(
